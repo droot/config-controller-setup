@@ -1,0 +1,10 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: config-controller-setup
+info:
+  description: sample description
+pipeline:
+  - image: gcr.io/sunilarora-sandbox/set-gcp-project:v0.0.2
+    configMap:
+       projectID: sunilarora-sandbox
