@@ -5,6 +5,7 @@ metadata:
 info:
   description: sample description
 pipeline:
-  - image: gcr.io/sunilarora-sandbox/set-gcp-project:v0.0.2
-    configMap:
-       projectID: sunilarora-sandbox
+  mutators:
+    - image: gcr.io/sunilarora-sandbox/set-gcp-project:v0.0.2
+      configMap:
+        projectID: sunilarora-sandbox

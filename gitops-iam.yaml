@@ -13,7 +13,7 @@ metadata:
   name: config-sync-wi
   namespace: config-control
 spec:
-  member: serviceAccount:PROJECT_ID.svc.id.goog[config-management-system/importer]
+  member: serviceAccount:sunilarora-sandbox.svc.id.goog[config-management-system/importer]
   role: roles/iam.workloadIdentityUser
   resourceRef:
     apiVersion: iam.cnrm.cloud.google.com/v1beta1
@@ -26,9 +26,9 @@ metadata:
   name: allow-configsync-sa-read-csr
   namespace: config-control
 spec:
-  member: serviceAccount:config-sync-sa@PROJECT_ID.iam.gserviceaccount.com
+  member: serviceAccount:config-sync-sa@sunilarora-sandbox.iam.gserviceaccount.com
   role: roles/source.reader
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
-    external: projects/PROJECT_ID
+    external: projects/sunilarora-sandbox
